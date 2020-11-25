@@ -5,3 +5,4 @@ This is a sample applications consisting of a simple notebook web application ru
 - Run npm install
 - Run docker-compose up
 - Open browser and go to http://localhost:3000
+-Test 1
