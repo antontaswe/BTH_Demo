@@ -8,13 +8,13 @@ services:
    ports:
      - 3000:3000
    networks:
-     - labnet
+     - jenkins-data_net
  db:
    image: mongo:latest
    ports:
      - 27017:27017
    networks:
-     - labnet
+     - jenkins-data_net
    volumes:
      - mongodb:/data/db
      - mongodb_config:/data/configdb
@@ -24,5 +24,5 @@ volumes:
    mongodb_config:
 
 networks:
-   labnet:
-    name: labnet
+   jenkins-data_net:
+    name: jenkins-data_net
