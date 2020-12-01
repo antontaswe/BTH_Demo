@@ -3,6 +3,5 @@ This is a sample applications consisting of a simple notebook web application ru
 - Pull code to local machine
 - CD to application folder
 - Run npm install
-- Run docker-compose up
+- Run docker-compose up -d
 - Open browser and go to http://localhost:3000
--Test1

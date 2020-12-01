@@ -3,16 +3,16 @@ version: '3.8'
 services:
  app:
    build: .
-   label: "BTH_Demo"
    depends_on:
      - db
    ports:
      - 3000:3000
    networks:
-     - jenkins-data_net
+     jenkins-data_net:
+        aliases:
+            - bth_demo
  db:
    image: mongo:latest
-   label: "BTH_Demo"
    ports:
      - 27017:27017
    networks:
