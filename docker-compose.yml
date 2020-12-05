@@ -8,7 +8,7 @@ services:
    ports:
      - 3000:3000
    networks:
-     jenkins-data_net:
+     jenkins:
         aliases:
             - bth_demo
  db:
@@ -16,7 +16,7 @@ services:
    ports:
      - 27017:27017
    networks:
-     - jenkins-data_net
+     - jenkins
    volumes:
      - mongodb:/data/db
      - mongodb_config:/data/configdb
@@ -26,5 +26,5 @@ volumes:
    mongodb_config:
 
 networks:
-   jenkins-data_net:
-    name: jenkins-data_net
+   jenkins:
+    name: jenkins
