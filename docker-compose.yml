@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
  app:
-   container_name: bth_demo
+   label: "BTH_Demo"
    image: bth_demo_app
    build: .
    depends_on:
@@ -15,6 +15,7 @@ services:
             - bth_demo
  db:
    image: mongo:latest
+   label: "BTH_Demo"
    ports:
      - 27017:27017
    networks:
