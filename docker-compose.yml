@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
  app:
-   container_name: BTH_Demo
-   image: Anton
+   container_name: bth_demo
+   image: bth_demo_app
    build: .
    depends_on:
      - db
