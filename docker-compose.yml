@@ -1,11 +1,10 @@
 version: '3.8'
 
 services:
- app:
-   labels: 
-     - "BTH_Demo"
-   image: bth_demo_app
+ app:  
    build: .
+   labels: 
+     - "com.docker.compose.project=bth_demo"
    depends_on:
      - db
    ports:
@@ -17,7 +16,7 @@ services:
  db:
    image: mongo:latest
    labels: 
-     - "BTH_Demo"
+     - "com.docker.compose.project=bth_demo"
    ports:
      - 27017:27017
    networks:
